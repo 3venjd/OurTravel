@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "OurTravel.Web"
+  "defaultProject": "OurTravel.Web",
+  "cli": {
+    "analytics": "973ef105-9421-4884-a215-64576ec3d3f4"
+  }
 }

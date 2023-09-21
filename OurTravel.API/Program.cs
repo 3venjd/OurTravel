@@ -11,8 +11,22 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=SQLConnection"));
+builder.Services.AddTransient<SeedDb>();
 
 var app = builder.Build();
+
+SeedData(app);
+
+void SeedData(WebApplication app)
+{
+    IServiceScopeFactory? scopeFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (IServiceScope? scope = scopeFactory!.CreateScope())
+    {
+        SeedDb? service = scope.ServiceProvider.GetService<SeedDb?>();
+        service!.SeedDbAsync().Wait();
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

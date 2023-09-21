@@ -23,7 +23,41 @@ namespace OurTravel.API.Data
             {
                 _context.Countries.Add(new Country
                 {
-                    Name = "Colombia"
+                    Name = "Colombia",
+                    States = new List<State> {
+                        new State
+                        {
+                            Name = "Antioquia",
+                            Cities = new List<City>
+                            {
+                                new City
+                                {
+                                    Name = "Medellín"
+                                },
+                                new City
+                                {
+                                    Name = "Río Negro"
+                                },
+                                new City
+                                {
+                                    Name = "Envigado"
+                                },
+                                new City
+                                {
+                                    Name = "Itagüi"
+                                },
+                                new City
+                                {
+                                    Name = "Bello"
+                                },
+                                new City
+                                {
+                                    Name = "Copacabana"
+                                },
+                            }
+                        },
+                    }
+
                 });
                 _context.Countries.Add(new Country
                 {

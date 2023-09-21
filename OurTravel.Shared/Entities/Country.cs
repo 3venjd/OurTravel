@@ -9,5 +9,9 @@ namespace OurTravel.Shared.Entities
         [Required(ErrorMessage = "The field {0} is required")]
         [MaxLength(100, ErrorMessage = "The field {0} can't be more than {1} characters")]
         public string? Name { get; set; }
+
+        public ICollection<State>? States { get; set; }
+
+        public int QuantityStates => States == null ? 0 : States.Count;
     }
 }

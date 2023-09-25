@@ -1,0 +1,61 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tourName{
+    width: 100%; 
+    margin-top: 3%;
+}
+
+.slider{
+    aspect-ratio: 2/3;
+    width: 70%;
+    max-height: 450px;
+    position: relative;
+    display: flex;
+    overflow:scroll;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(241, 235, 235),-5px -5px 15px rgb(235, 229, 229);
+}
+
+
+.slider img{
+    width: 100%;
+    left: 10;
+    position: sticky;
+    object-fit: cover;
+    border-radius: 5px;
+    scroll-snap-align: center;
+    margin: 0 10px;
+    background-color: #f6f7f9;
+    padding: 10px;
+}
+
+.Information{
+    box-shadow: 5px 5px 15px rgb(241, 235, 235),-5px -5px 15px rgb(235, 229, 229);
+    border-radius: 10px;
+    margin-left: 1%;
+    width: 29%;
+    display: inline-flex;
+    max-height: 450px;
+    padding: 3%;
+}
+
+
+@media (max-width: 800px){
+
+    .slider{
+        width: 100%;
+    }
+
+    .Information{
+        width: 100%;
+        margin-top: 6% ;
+        display: inline-flex;
+    }
+}
+

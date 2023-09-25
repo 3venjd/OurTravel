@@ -1,0 +1,51 @@
+.carousel{
+    width: 100%;
+    max-width: 120em;
+    padding: 2em;
+    border-radius: 98px;
+    background-color: #f6f7f9;
+    box-shadow: 5px 5px 15px rgb(241, 235, 235),-5px -5px 15px rgb(235, 229, 229);
+    overflow: hidden;
+}
+
+.Imgcontainer {
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+
+
+.Imgcontainer img{
+    max-height: 50vh;
+    max-width: 50%;
+    border-radius: 10px;
+    background-color: #f6f7f9;
+    box-shadow: 5px 5px 15px rgb(241, 235, 235),-5px -5px 15px rgb(235, 229, 229);
+}
+
+.points{
+    padding: .4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.point {
+    width: 1em;
+    height: 1em;
+    margin: 1em 1em 0;
+    border-radius: 50%;
+    background-color: #f6f7f9;
+    box-shadow: 5px 5px 15px rgba(71, 67, 67, 0.374),5px 5px 15px rgba(71, 67, 67, 0.374);
+    list-style-type: none;
+}
+
+.point.active{
+    background-color: lightblue;
+}

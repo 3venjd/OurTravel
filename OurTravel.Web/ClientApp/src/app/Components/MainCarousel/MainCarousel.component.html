@@ -1,0 +1,22 @@
+<!--/assets/Imgs/JeraGoTravelIcon.jpg-->
+<div [ngClass]="'mainContainer'">
+  <div [ngClass]="'carousel'" >
+    <div [ngClass]="'Imgcontainer'" [style]="ImageContainerStyles">
+      <img src="/assets/Imgs/SaltoAngel/SaltoAngel1.jpg" alt="Image 1" [ngClass]="'img'">
+      <img src="/assets/Imgs/SaltoAngel/SaltoAngel2.jpg" alt="Image 2" [ngClass]="'img'">
+      <img src="/assets/Imgs/SaltoAngel/SaltoAngel3.png" alt="Image 2" [ngClass]="'img'">
+      <img src="/assets/Imgs/SaltoAngel/SaltoAngel4.jpg" alt="Image 2" [ngClass]="'img'">
+      <img src="/assets/Imgs/SaltoAngel/SaltoAngel5.jpg" alt="Image 2" [ngClass]="'img'">
+    </div>
+  
+    <ul class="points" >
+      <li (click)="pointClicked(0)" [ngClass]="'point active'"></li>
+      <li (click)="pointClicked(1)" [ngClass]="'point'"></li>
+      <li (click)="pointClicked(2)" [ngClass]="'point'"></li>
+      <li (click)="pointClicked(3)" [ngClass]="'point'"></li>
+      <li (click)="pointClicked(4)" [ngClass]="'point'"></li>
+    </ul>
+  </div>
+  
+  
+</div>

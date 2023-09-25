@@ -14,6 +14,8 @@ import { SliderComponent } from './Components/Slider/Slider.component';
 import { CountryComponent } from './Components/Country/Country.component';
 import { StateComponent } from './Components/State/State.component';
 import { CityComponent } from './Components/City/City.component';
+import { UserNameComponent } from './Components/UserName/UserName.component';
+import { CountryService } from './Shared/Services/Country/Country.service';
 
 @NgModule({
   declarations: [	
@@ -26,7 +28,9 @@ import { CityComponent } from './Components/City/City.component';
     SliderComponent,
     CountryComponent,
     StateComponent,
-    CityComponent
+    CityComponent,
+    UserNameComponent,
+    
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,7 +42,9 @@ import { CityComponent } from './Components/City/City.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [],
+  providers: [
+    CountryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

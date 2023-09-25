@@ -36,6 +36,7 @@ namespace OurTravel.API.Controllers
             return Ok(city);
         }
 
+        [HttpPost]
         public async Task<ActionResult> PostAsync(City city)
         {
             try

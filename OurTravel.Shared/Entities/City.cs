@@ -12,6 +12,8 @@ namespace OurTravel.Shared.Entities
 
         public int StateId { get; set; }
 
+        public string? Flag { get; set; }
+
         public State? State { get; set; }
 
     }

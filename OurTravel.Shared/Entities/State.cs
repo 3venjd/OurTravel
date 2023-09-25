@@ -16,6 +16,8 @@ namespace OurTravel.Shared.Entities
 
         public ICollection<City>? Cities { get; set; }
 
+        public string? Flag { get; set; }
+
         public int QuantityCities => Cities == null ? 0 : Cities.Count;
     }
 }

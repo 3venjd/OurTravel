@@ -11,6 +11,9 @@ import { CounterComponent } from '../app/Components/counter/counter.component';
 import { FetchDataComponent } from '../app/Components/fetch-data/fetch-data.component';
 import { MainCarouselComponent } from './Components/MainCarousel/MainCarousel.component';
 import { SliderComponent } from './Components/Slider/Slider.component';
+import { CountryComponent } from './Components/Country/Country.component';
+import { StateComponent } from './Components/State/State.component';
+import { CityComponent } from './Components/City/City.component';
 
 @NgModule({
   declarations: [	
@@ -20,7 +23,10 @@ import { SliderComponent } from './Components/Slider/Slider.component';
     CounterComponent,
     FetchDataComponent,
     MainCarouselComponent,
-    SliderComponent
+    SliderComponent,
+    CountryComponent,
+    StateComponent,
+    CityComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

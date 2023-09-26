@@ -40,6 +40,8 @@ import { CountryService } from './Shared/Services/Country/Country.service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'state', component : StateComponent},
+      { path: 'city', component : CityComponent}
     ])
   ],
   providers: [

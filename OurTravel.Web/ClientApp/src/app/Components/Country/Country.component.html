@@ -1,27 +1,39 @@
-<table class="table">
-  <thead>
-      <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Flag</th>
-          <th>States</th>
-          <th>Capital</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let country of service.countryList">
-          <td>{{country.id}}</td>
-          <td>{{country.name}}</td>
-          <td><img style="width: 50px; height: 30px;" src={{country.flag}}></td>
-          <td>{{country.quantityStates}}</td>
-          <td>{{country.capital}}</td>
-          <td>
-            <span id="DetailIcon" class="material-symbols-outlined">&#xe46e;</span>
-            <span id="EditIcon" class="material-symbols-outlined">&#xe3c9;</span>
-            <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
-          </td>
-      </tr>
-      
-      
-  </tbody>
-</table>
+<div class="flex-container">
+  <div class="flex-item" id="InformationTable">
+    <table class="table">
+      <thead>
+          <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Flag</th>
+              <th>States</th>
+              <th>Capital</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let country of service.countryList">
+              <td>{{country.id}}</td>
+              <td>{{country.name}}</td>
+              <td><img style="width: 50px; height: 30px;" src={{country.flag}}></td>
+              <td>{{country.quantityStates}}</td>
+              <td>{{country.capital}}</td>
+              <td>
+                <span id="DetailIcon" class="material-symbols-outlined">&#xe46e;</span>
+                <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
+              </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="flex-item" id ="EditSection">
+    <form #form = "ngForm" (submit)="OnSubmit(form)">
+      <input type="hidden" name="id" [value]="service.EditCountryData.id">
+      <h5>Edit Section<span id="EditIcon" class="material-symbols-outlined">&#xe3c9;</span></h5>
+      <input type="text" placeholder="Name" #name = "ngModel" name="name" [(ngModel)]="service.EditCountryData.name">
+      <input type="text" placeholder="Flag" #name = "ngModel" name="flag" [(ngModel)]="service.EditCountryData.flag">
+      <input type="text" placeholder="Capital" #name = "ngModel" name="capital" [(ngModel)]="service.EditCountryData.capital">
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>  
+</div>

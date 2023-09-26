@@ -1,0 +1,39 @@
+.flex-container{
+    display: flex;
+    padding: 10px;
+}
+
+div{
+    background-color: #f6f7f9;
+    box-shadow: 5px 5px 15px rgb(241, 235, 235),-5px -5px 15px rgb(235, 229, 229);
+}
+
+#InformationTable{
+    width: 68%;
+    margin-right: 2%;
+}
+
+#EditSection{
+    width: 30%;
+    padding: 10px;
+}
+
+input{
+    border: 2px solid lightgray;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+span{
+    margin: 10px;
+}
+
+label{
+    padding-bottom: 10px;
+}
+
+button{
+    border-radius: 6px;
+    border: 2px solid lightgray;
+}

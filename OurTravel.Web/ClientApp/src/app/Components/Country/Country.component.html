@@ -11,7 +11,7 @@
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor="let country of service.countryList">
+          <tr *ngFor="let country of service.listData" (click)="populate(country)">
               <td>{{country.id}}</td>
               <td>{{country.name}}</td>
               <td><img style="width: 50px; height: 30px;" src={{country.flag}}></td>
@@ -19,19 +19,19 @@
               <td>{{country.capital}}</td>
               <td>
                 <span id="DetailIcon" class="material-symbols-outlined">&#xe46e;</span>
-                <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
+                <span id="DeleteIcon" class="material-symbols-outlined" (click)="onDelete(country.id,form)">&#xe872;</span>
               </td>
           </tr>
       </tbody>
     </table>
   </div>
   <div class="flex-item" id ="EditSection">
-    <form #form = "ngForm" (submit)="OnSubmit(form)">
-      <input type="hidden" name="id" [value]="service.EditCountryData.id">
+    <form #form = "ngForm" (submit)="OnSubmit(form)" [class.submitted] = "service.formSubmitted" novalidate autocomplete="off">
+      <input type="hidden" name="id" [value]="service.EditData.id">
       <h5>Edit Section<span id="EditIcon" class="material-symbols-outlined">&#xe3c9;</span></h5>
-      <input type="text" placeholder="Name" #name = "ngModel" name="name" [(ngModel)]="service.EditCountryData.name">
-      <input type="text" placeholder="Flag" #name = "ngModel" name="flag" [(ngModel)]="service.EditCountryData.flag">
-      <input type="text" placeholder="Capital" #name = "ngModel" name="capital" [(ngModel)]="service.EditCountryData.capital">
+      <input type="text" placeholder="Name" #name = "ngModel" name="name" [(ngModel)]="service.EditData.name" required minlength="3">
+      <input type="text" placeholder="Flag" #name = "ngModel" name="flag" [(ngModel)]="service.EditData.flag" required minlength="3">
+      <input type="text" placeholder="Capital" #name = "ngModel" name="capital" [(ngModel)]="service.EditData.capital" required minlength="3">
       <br>
       <button type="submit">Submit</button>
     </form>

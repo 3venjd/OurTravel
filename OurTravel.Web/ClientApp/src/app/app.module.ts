@@ -16,6 +16,12 @@ import { StateComponent } from './Components/State/State.component';
 import { CityComponent } from './Components/City/City.component';
 import { UserNameComponent } from './Components/UserName/UserName.component';
 import { CountryService } from './Shared/Services/Country/Country.service';
+import { RepositoryService } from './Shared/Services/Repository.service';
+
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [	
@@ -42,10 +48,14 @@ import { CountryService } from './Shared/Services/Country/Country.service';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'state', component : StateComponent},
       { path: 'city', component : CityComponent}
-    ])
+    ]),
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
-    CountryService
+    CountryService,
+    RepositoryService
   ],
   bootstrap: [AppComponent]
 })

@@ -5,31 +5,32 @@ import { Country } from '../../Models/Country';
 import { NgForm } from '@angular/forms';
 
 @Injectable()
-export class CountryService {
+export class CountryService <T> {
 
-    url:string = environment.apiBaseUrl + 'countries';
+    url:string = environment.apiBaseUrl;
     countryList: Country[] = [];
     EditCountryData: Country = new Country();
     constructor(private http: HttpClient) { }
+    listData : T[] = [];
+    EditData? : T;
 
-    refreshList(){
-        console.log("start");
-        this.http.get(this.url)
+    refreshList(module :string){
+        this.http.get(this.url + module)
         .subscribe({
             next : res => {
-                this.countryList = res as Country[];
-                console.log(res);
+                this.listData = res as T[];
+                console.log(this.listData);
             },
             error: err => {console.log(err)}
         })
     }
 
-    postCountry(){
-        return this.http.post(this.url, this.EditCountryData)
+    postCountry(module :string){
+        return this.http.post(this.url + module, this.EditCountryData)
     }
 
-    resetForm(form:NgForm){
+    resetForm(form:NgForm, model : T){
         form.form.reset();
-        this.EditCountryData = new Country();
+        this.EditData = model;
     }
 }

@@ -15,13 +15,13 @@ import { CountryComponent } from './Components/Country/Country.component';
 import { StateComponent } from './Components/State/State.component';
 import { CityComponent } from './Components/City/City.component';
 import { UserNameComponent } from './Components/UserName/UserName.component';
-import { CountryService } from './Shared/Services/Country/Country.service';
 import { RepositoryService } from './Shared/Services/Repository.service';
 
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { CountryDetailsComponent } from './Components/Country/CountryDetails/CountryDetails.component';
 
 @NgModule({
   declarations: [	
@@ -33,6 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
     MainCarouselComponent,
     SliderComponent,
     CountryComponent,
+    CountryDetailsComponent,
     StateComponent,
     CityComponent,
     UserNameComponent,
@@ -46,6 +47,7 @@ import { ToastrModule } from 'ngx-toastr';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'countryDetails/:id', component : CountryDetailsComponent},
       { path: 'state', component : StateComponent},
       { path: 'city', component : CityComponent}
     ]),
@@ -54,7 +56,6 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
-    CountryService,
     RepositoryService
   ],
   bootstrap: [AppComponent]

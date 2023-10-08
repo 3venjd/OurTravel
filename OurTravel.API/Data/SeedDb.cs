@@ -58,6 +58,17 @@ namespace OurTravel.API.Data
                                 },
                             }
                         },
+                        new State
+                        {
+                            Name = "Bogotá DC",
+                            Cities = new List<City>
+                            {
+                                new City
+                                {
+                                    Name = "Bogotá"
+                                }
+                            }
+                        },
                     }
 
                 });

@@ -18,7 +18,7 @@
               <td>{{country.quantityStates}}</td>
               <td>{{country.capital}}</td>
               <td>
-                <span id="DetailIcon" class="material-symbols-outlined">&#xe46e;</span>
+                <span id="DetailIcon" [routerLink]="['/countryDetails',country.id]" class="material-symbols-outlined">&#xe46e;</span>
                 <span id="DeleteIcon" class="material-symbols-outlined" (click)="onDelete(country.id,form)">&#xe872;</span>
               </td>
           </tr>

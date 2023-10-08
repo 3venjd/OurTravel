@@ -37,3 +37,7 @@ button{
     border-radius: 6px;
     border: 2px solid lightgray;
 }
+
+#DeleteIcon,#DetailIcon:hover{
+    cursor:pointer;
+}

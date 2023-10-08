@@ -26,6 +26,10 @@ export class RepositoryService <T> {
           })
       }
 
+      GetDataDetails(module : string, idData : string){
+        return this.http.get(this.url + module + `/${idData}`);
+      }
+
       postData(module :string,form:NgForm){
           return this.http.post(this.url + module, form)
       }

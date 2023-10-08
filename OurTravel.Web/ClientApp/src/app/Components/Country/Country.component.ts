@@ -34,7 +34,6 @@ export class CountryComponent implements OnInit {
 
   populate(selectedRecord: Country){
     this.service.EditData = Object.assign({}, selectedRecord);
-    console.log(this.service.EditData.id)
   }
 
   InsertRecord(form: NgForm) {

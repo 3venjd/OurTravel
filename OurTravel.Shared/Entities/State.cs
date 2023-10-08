@@ -10,9 +10,12 @@ namespace OurTravel.Shared.Entities
         [MaxLength(100, ErrorMessage = "The field {0} can't be more than {1} characters")]
         public string? Name { get; set;}
 
+        public string? Description { get; set; }
+
         public int CountryId { get; set; }
 
         public Country? Country { get; set; }
+
 
         public ICollection<City>? Cities { get; set; }
 

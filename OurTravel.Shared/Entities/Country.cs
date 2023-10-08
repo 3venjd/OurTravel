@@ -12,6 +12,8 @@ namespace OurTravel.Shared.Entities
 
         public string? Flag { get; set; }
 
+        public string? Description { get; set; }
+
         public ICollection<State>? States { get; set; }
 
         public string? Capital { get; set; }

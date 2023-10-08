@@ -48,7 +48,7 @@ import { CountryDetailsComponent } from './Components/Country/CountryDetails/Cou
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'countryDetails/:id', component : CountryDetailsComponent},
-      { path: 'state', component : StateComponent},
+      { path: 'state/:id', component : StateComponent},
       { path: 'city', component : CityComponent}
     ]),
     CommonModule,

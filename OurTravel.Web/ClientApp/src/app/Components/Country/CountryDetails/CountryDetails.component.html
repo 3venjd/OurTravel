@@ -1,1 +1,45 @@
-<p>{{countryData.name}}</p><img style="width: 100px;" src="{{countryData.flag}}">
+<div class="grid-container">
+    <div class="grid-item CountryInformation">
+        <p>{{countryData.name}}</p>
+        <img src="{{countryData.flag}}">
+        <p>{{countryData.description}}</p>
+    </div>
+    <div class="grid-item StateTable">
+        <table>
+            <caption>States</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Flag</th>
+                    <th>Cities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let state of countryData.states">
+                    <td>{{state.id}}</td>
+                    <td>{{state.name}}</td>
+                    <td><img src="{{state.flag}}"></td>
+                    <td>{{state.quantityCities}}</td>
+                    <td>
+                        <span id="DetailIcon" [routerLink]="['/state',state.id]" class="material-symbols-outlined">&#xe46e;</span>
+                        <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="grid-item Edit">
+        <form #form = "ngForm" [class.submitted] = "service.formSubmitted" novalidate autocomplete="off">
+            <input type="hidden" name="id" [value]="service.EditData.id">
+            <h5>Edit Section<span id="EditIcon" class="material-symbols-outlined">&#xe3c9;</span></h5>
+            <input type="text" placeholder="Name" #name = "ngModel" name="name" [(ngModel)]="service.EditData.name" required minlength="3">
+            <input type="text" placeholder="Flag" #name = "ngModel" name="flag" [(ngModel)]="service.EditData.flag" required minlength="3">
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+    </div>
+    
+</div>
+
+

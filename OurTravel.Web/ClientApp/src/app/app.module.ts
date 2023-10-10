@@ -49,7 +49,7 @@ import { CountryDetailsComponent } from './Components/Country/CountryDetails/Cou
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'countryDetails/:id', component : CountryDetailsComponent},
       { path: 'state/:id', component : StateComponent},
-      { path: 'city', component : CityComponent}
+      { path: 'city/:id', component : CityComponent}
     ]),
     CommonModule,
     BrowserAnimationsModule, // required animations module

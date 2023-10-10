@@ -24,6 +24,15 @@ input{
     border-radius: 5px;
     margin-bottom: 10px;
 }
+#EditSection textarea{
+    display: flex;
+    border: 2px solid lightgray;
+    padding: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+}
 
 span{
     margin: 10px;
@@ -40,4 +49,20 @@ button{
 
 #DeleteIcon,#DetailIcon:hover{
     cursor:pointer;
+}
+
+tbody tr td img{
+    width: 50px; 
+    height: 30px;
+}
+
+tbody tr td p{
+        /* Establece un alto máximo basado en el alto de línea. Si el alto de línea es 20px, entonces 40px mostrará 2 líneas. */
+        max-height: 40px; 
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 20px; /* Ajusta según tus necesidades */
+        text-overflow: ellipsis;
 }

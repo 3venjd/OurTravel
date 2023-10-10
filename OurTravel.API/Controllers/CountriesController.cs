@@ -26,17 +26,6 @@ namespace OurTravel.API.Controllers
                 );
         }
 
-        [HttpGet("Full")]
-        public async Task<IActionResult> GetFullAsync()
-        {
-            return Ok(
-                    await _context.Countries
-                    .Include(x => x.States!)
-                    .ThenInclude(x => x.Cities)
-                    .ToListAsync()
-                );
-        }
-
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetAsync(int id)
         {

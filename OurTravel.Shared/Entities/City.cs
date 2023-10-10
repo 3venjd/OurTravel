@@ -18,5 +18,9 @@ namespace OurTravel.Shared.Entities
 
         public State? State { get; set; }
 
+        public ICollection<InterestedPlace>? Places { get; set;}
+
+        public int QuantityPlaces => Places == null ? 0 : Places.Count;
+
     }
 }

@@ -23,6 +23,7 @@ export class CountryDetailsComponent implements OnInit {
       .subscribe({
         next: resp => {
           this.countryData = resp as Country
+          console.log(this.countryData)
         },
         error: err => {console.log(err)}
       });

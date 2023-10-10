@@ -5,5 +5,6 @@ export class State {
     name: string = '';
     flag : string = '';
     cities : City[] = [];
+    description : string = '';
     quantityCities : number = 0;
 }

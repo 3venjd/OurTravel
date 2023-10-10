@@ -13,6 +13,7 @@
                     <th>Name</th>
                     <th>Flag</th>
                     <th>Cities</th>
+                    <th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                     <td>{{state.name}}</td>
                     <td><img src="{{state.flag}}"></td>
                     <td>{{state.quantityCities}}</td>
+                    <td><p>{{state.description}}</p></td>
                     <td>
                         <span id="DetailIcon" [routerLink]="['/state',state.id]" class="material-symbols-outlined">&#xe46e;</span>
                         <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
@@ -35,6 +37,7 @@
             <h5>Edit Section<span id="EditIcon" class="material-symbols-outlined">&#xe3c9;</span></h5>
             <input type="text" placeholder="Name" #name = "ngModel" name="name" [(ngModel)]="service.EditData.name" required minlength="3">
             <input type="text" placeholder="Flag" #name = "ngModel" name="flag" [(ngModel)]="service.EditData.flag" required minlength="3">
+            <textarea type="text" placeholder="Description" #name = "ngModel" name="description" [(ngModel)]="service.EditData.description"></textarea>
             <br>
             <button type="submit">Submit</button>
           </form>

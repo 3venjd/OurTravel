@@ -28,7 +28,9 @@ namespace OurTravel.API.Controllers
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetAsync(int id)
         {
-            var city = await _context.Cities.FirstOrDefaultAsync(x => x.Id == id);
+            var city = await _context.Cities
+                .Include(x => x.Places)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (city == null)
             {
                 return NotFound();

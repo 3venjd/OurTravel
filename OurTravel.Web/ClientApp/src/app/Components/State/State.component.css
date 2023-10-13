@@ -94,3 +94,14 @@ img{
     width: 100%;
     height: 150px;
 }
+
+tbody tr td p {
+  /* Establece un alto máximo basado en el alto de línea. Si el alto de línea es 20px, entonces 40px mostrará 2 líneas. */
+  max-height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 20px; /* Ajusta según tus necesidades */
+  text-overflow: ellipsis;
+}

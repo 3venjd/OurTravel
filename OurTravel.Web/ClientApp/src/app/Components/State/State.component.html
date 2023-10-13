@@ -22,6 +22,7 @@
                   <td><img src="{{city.flag}}"></td>
                   <td><p>{{city.description}}</p></td>
                   <td>
+                      <span id="DetailIcon" [routerLink]="['/city',city.id]" class="material-symbols-outlined">&#xe46e;</span>
                       <span id="DeleteIcon" class="material-symbols-outlined">&#xe872;</span>
                   </td>
               </tr>
@@ -41,5 +42,3 @@
   </div>
   
 </div>
-
-

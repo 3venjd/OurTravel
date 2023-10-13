@@ -1,0 +1,15 @@
+img{
+    width: 150px;
+    border: 1px solid black;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 5px;
+}
+
+.grid-item{
+    border: 1px solid black;
+}

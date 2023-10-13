@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { CountryDetailsComponent } from './Components/Country/CountryDetails/CountryDetails.component';
+import { PlaceGalleryComponent } from './Components/place-gallery/place-gallery.component';
 
 @NgModule({
   declarations: [	
@@ -37,6 +38,7 @@ import { CountryDetailsComponent } from './Components/Country/CountryDetails/Cou
     StateComponent,
     CityComponent,
     UserNameComponent,
+    PlaceGalleryComponent
     
    ],
   imports: [

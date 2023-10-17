@@ -33,6 +33,8 @@ namespace OurTravel.API.Data
             modelBuilder.Entity<State>().HasIndex("CountryId","Name").IsUnique();
 
             modelBuilder.Entity<City>().HasIndex("StateId", "Name").IsUnique();
+
+            modelBuilder.Entity<InterestedPlace>().HasIndex("CityId", "Name").IsUnique();
         }
     }
 }
